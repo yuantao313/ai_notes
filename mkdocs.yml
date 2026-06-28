@@ -1,0 +1,30 @@
+site_name: AI学习
+
+theme:
+  name: material
+
+nav:
+  - 首页: index.md
+  - 欢迎: 欢迎.md
+  - Ascend C:
+    - Ascend C 学习: AscendC学习.md
+    - UnitFlag 使能: op_ascendc/unitflag.md
+  - CUDA:
+    - 用 kernel 学习 CUDA: op_cuda/index.md
+    - float4 向量化: op_cuda/float4.md
+    - Warp Shuffle: op_cuda/warp_shuffle.md
+  - Transformer:
+    - 基础 Transformer: transformer/00_basic_transformer.md
+    - Attention 机制: transformer/attention.md
+    - Encoder: transformer/encoder.md
+  - 卷积: convolution.md
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - toc:
+      toc_depth: 3        # 显示 # ## ### 三级标题
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
