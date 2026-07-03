@@ -1,29 +1,53 @@
-site_name: AI学习
+site_name: AI 知识库 — 全栈学习
+site_description: 从芯片电路到 Agent 应用，系统性构建 AI 时代知识体系
 
 theme:
   name: material
+  language: zh
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
 
 nav:
-  - 首页: index.md
-  - 欢迎: 欢迎.md
-  - Ascend C:
-    - Ascend C 学习: AscendC学习.md
-    - UnitFlag 使能: op_ascendc/unitflag.md
-  - CUDA:
-    - 用 kernel 学习 CUDA: op_cuda/index.md
-    - float4 向量化: op_cuda/float4.md
-    - Warp Shuffle: op_cuda/warp_shuffle.md
-  - Transformer:
-    - 基础 Transformer: transformer/00_basic_transformer.md
-    - Attention 机制: transformer/attention.md
-    - Encoder: transformer/encoder.md
-  - 卷积: convolution.md
+  - 🏠 首页: index.md
+
+  - ⚡ XPU 编程:
+      - CUDA:
+          - 概述: 02_xpu_programming/01_cuda/index.md
+          - 参考:
+              - 线程索引与层级: 02_xpu_programming/01_cuda/thread_index.md
+              - 同步: 02_xpu_programming/01_cuda/sync.md
+          - 硬件特性:
+              - Warp Shuffle: 02_xpu_programming/01_cuda/warp_shuffle.md
+              - Shared Memory: 02_xpu_programming/01_cuda/shared_memory.md
+              - 向量化内存访问: 02_xpu_programming/01_cuda/vectorized_memory.md
+              - 原子函数: 02_xpu_programming/01_cuda/atomic.md
+          - 综合实战:
+              - Block 级 Shuffle 归约: 02_xpu_programming/01_cuda/practice/reduce_shfl.md
+      - Ascend C:
+          - UnitFlag 使能: 02_xpu_programming/02_ascend/unitflag.md
+
+  - 🧠 模型架构:
+      - Transformer:
+          - 基础 Transformer: 05_inference/01_transformer/00_basic_transformer.md
+          - Attention 机制: 05_inference/01_transformer/attention.md
+          - Encoder: 05_inference/01_transformer/encoder.md
+      - 卷积: 05_inference/convolution.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   - toc:
-      toc_depth: 3        # 显示 # ## ### 三级标题
+      toc_depth: 3
 
 extra_javascript:
   - javascripts/mathjax.js
