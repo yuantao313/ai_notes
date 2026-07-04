@@ -22,12 +22,13 @@ nav:
               - 线程索引与层级: 02_xpu_programming/01_cuda/thread_index.md
               - 同步: 02_xpu_programming/01_cuda/sync.md
           - 硬件特性:
-              - Warp Shuffle: 02_xpu_programming/01_cuda/warp_shuffle.md
+              - 原子函数: 02_xpu_programming/01_cuda/atomic.md
               - Shared Memory: 02_xpu_programming/01_cuda/shared_memory.md
               - 向量化内存访问: 02_xpu_programming/01_cuda/vectorized_memory.md
-              - 原子函数: 02_xpu_programming/01_cuda/atomic.md
+              - Warp Shuffle: 02_xpu_programming/01_cuda/warp_shuffle.md
           - 综合实战:
-              - Block 级 Shuffle 归约: 02_xpu_programming/01_cuda/practice/reduce_shfl.md
+              - Block 级 Shuffle 归约: 02_xpu_programming/01_cuda/practice/reduce_sum.md
+              - Online Softmax: 02_xpu_programming/01_cuda/practice/online_softmax.md
       - Ascend C:
           - UnitFlag 使能: 02_xpu_programming/02_ascend/unitflag.md
 
